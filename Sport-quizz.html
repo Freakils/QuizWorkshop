@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title></title>
+		<style>
+		</style>
+		<link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<form id="quizz-form">
+<div class="container">
+	<h1>My Sport Quizz</h1>
+		<h2>What is the most popular Sport in SA?</h2>
+		<div class="radio">
+		  <label>
+		    <input type="radio" name="Question1" id="blankRadio1" value="option1" aria-label="...">Underwater Hockey
+		  </label>
+		</div>
+
+		<div class="radio">
+		  <label>
+		    <input type="radio" name="Question1" id="blankRadio1" value="option1" aria-label="...">Rugby
+		  </label>
+		</div>
+
+		<div class="radio">
+		  <label>
+		    <input type="radio" name="Question1" id="blankRadio1" value="option1" aria-label="...">Soccer
+		  </label>
+		</div>
+
+	<h2>For which sport do you need a racket?</h2>
+		<div class="radio">
+
+		  <label>
+		    <input type="radio" name="Question2" id="blankRadio1" value="option1" aria-label="...">Squash
+		  </label>
+		</div>
+
+		<div class="radio">
+
+		  <label>
+		    <input type="radio" name="Question2" id="blankRadio1" value="option1" aria-label="...">Cricket
+		  </label>
+		</div>
+
+		<div class="radio">
+		  <label>
+		    <input type="radio" name="Question2" id="blankRadio1" value="option1" aria-label="...">Soft Ball
+		  </label>
+		</div>
+
+
+	<h2>Which sport use the word "Love"?</h2>
+
+		<div class="radio">
+		  <label>
+		    <input type="radio" name="Question3" id="blankRadio1" value="option1" aria-label="...">Baseball
+		  </label>
+		</div>
+
+		<div class="radio">
+		  <label>
+		    <input type="radio" name="Question3" id="blankRadio1" value="option1" aria-label="...">Water-Polo
+		  </label>
+		</div>
+
+		<div class="radio">
+		  <label>
+		    <input type="radio" name="Question3" id="blankRadio1" value="option1" aria-label="...">Netball
+		  </label>
+		</div>
+		<input id= "button" type="submit" class="btn btn-success"></button>
+
+</div>
+</form>
+  
+<script src="jquery.min.js"></script>
+<script src="bootstrap.min.js"></script>
+	<script>
+	  $("#quizz-form").on("submit", function(evt) {
+	    alert("Submit!!") 
+		  // read about this
+		  evt.preventDefault();
+
+		  // https:api.jquery.com/serializeArray/
+		  var answers = $(this).serializeArray();
+
+		  var answersString = JSON.stringify(answers);
+		  alert(answersString);
+
+		  // alert($(this)).serializeArray()[0].name);
+		  // how to check the answer?
+
+		  // create a space on the right to display score.
+
+	  });
+
+
+
+	</script>
+
+</body>
+</html>
