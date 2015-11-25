@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Questions_Form</title>
+	<link rel="stylesheet" href="bootstrap.min.css">
+
+<ul class="nav nav-pills">
+  <li role="presentation" class="active"><a href="index.html">Home</a></li>
+  <li role="presentation"><a href="https://github.com/Freakils/RedandGreen">Profile</a></li>
+  <li role="presentation"><a href="https://mail.google.com/mail/u/0/#inbox">Messages</a></li>
+</ul>
+
+</head>
+
+<body>
+<form id="questions-form">
+
+	<div class="container">
+		<h1>My Quizz Form</h1>
+			<h2>Team you support in Superugby?</h2>  
+		  	<div class="form-group">
+		    	<input type="text" class="form-control" placeholder="Answer">
+		  	</div>
+
+	  		<h2>Which team won the 2015 Superugby championship?</h2>
+		  	<div class="radio">
+				<label>
+				    <input type="radio" name="Question2" id="blankRadio1" value="option1" aria-label="...">Brumbies
+				 </label>
+			</div>
+
+			<div class="radio">
+				<label>
+				    <input type="radio" name="Question2" id="blankRadio1" value="option1" aria-label="...">Highlanders
+			  	</label>
+			</div>
+
+			<div class="radio">
+				<label>
+				    <input type="radio" name="Question2" id="blankRadio1" value="option1" aria-label="...">Hurricanes
+				</label>
+			</div>
+
+			<div class="checkbox">
+	  		<h2>Nominate three standout pplayer for best player of Superugby 2015</h2>
+		  		<label>
+					<input type="checkbox" value="">Julian Savea
+		  		</label> <br>
+
+		  		<label>
+					<input type="checkbox" value="">Nehe Milner-Skudder
+		  		</label> <br>
+
+		  		<label>
+					<input type="checkbox" value="">Malakai Fekitoa
+		  		</label> <br>
+
+		  		<label>
+					<input type="checkbox" value="">Aaron Smith
+		  		</label> <br>
+
+		  		<label>
+					<input type="checkbox" value="">Lima Sapoaga
+		  		</label><br>
+			</div>
+			
+			<input id= "button" type="submit" class="btn btn-success"></button>
+	</div>
+
+	<script src="jquery.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+
+</body>
+
+</html>
+
+
+
+<!--one where the user types the answer;
+    one where they pick an option from three choices (use radios);
+    one where they pick as many options as apply from five choices (use checkboxes).
+ -->
