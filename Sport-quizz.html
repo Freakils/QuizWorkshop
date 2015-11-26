@@ -7,25 +7,27 @@
 		</style>
 		<link rel="stylesheet" href="bootstrap.min.css">
 </head>
+
+<div class="col-md-8  bg-success">
 <form id="quizz-form">
 <div class="container">
 	<h1>My Sport Quizz</h1>
 		<h2>What is the most popular Sport in SA?</h2>
 		<div class="radio">
 		  <label>
-		    <input type="radio" name="Question1" id="blankRadio1" value="option1" aria-label="...">Underwater Hockey
+		    <input type="radio" name="Question1" id="blankRadio1" value="Underwater Hockey" aria-label="...">Underwater Hockey
 		  </label>
 		</div>
 
 		<div class="radio">
 		  <label>
-		    <input type="radio" name="Question1" id="blankRadio1" value="option1" aria-label="...">Rugby
+		    <input type="radio" name="Question1" id="blankRadio1" value="Rugby" aria-label="...">Rugby
 		  </label>
 		</div>
 
 		<div class="radio">
 		  <label>
-		    <input type="radio" name="Question1" id="blankRadio1" value="option1" aria-label="...">Soccer
+		    <input type="radio" name="Question1" id="blankRadio1" value="Soccer" aria-label="...">Soccer
 		  </label>
 		</div>
 
@@ -33,20 +35,20 @@
 		<div class="radio">
 
 		  <label>
-		    <input type="radio" name="Question2" id="blankRadio1" value="option1" aria-label="...">Squash
+		    <input type="radio" name="Question2" id="blankRadio1" value="Squash" aria-label="...">Squash
 		  </label>
 		</div>
 
 		<div class="radio">
 
 		  <label>
-		    <input type="radio" name="Question2" id="blankRadio1" value="option1" aria-label="...">Cricket
+		    <input type="radio" name="Question2" id="blankRadio1" value="Cricket" aria-label="...">Cricket
 		  </label>
 		</div>
 
 		<div class="radio">
 		  <label>
-		    <input type="radio" name="Question2" id="blankRadio1" value="option1" aria-label="...">Soft Ball
+		    <input type="radio" name="Question2" id="blankRadio1" value="Soft Ball" aria-label="...">Soft Ball
 		  </label>
 		</div>
 
@@ -55,50 +57,81 @@
 
 		<div class="radio">
 		  <label>
-		    <input type="radio" name="Question3" id="blankRadio1" value="option1" aria-label="...">Baseball
+		    <input type="radio" name="Question3" id="blankRadio1" value="Baseball" aria-label="...">Baseball
 		  </label>
 		</div>
 
 		<div class="radio">
 		  <label>
-		    <input type="radio" name="Question3" id="blankRadio1" value="option1" aria-label="...">Water-Polo
+		    <input type="radio" name="Question3" id="blankRadio1" value="Water-Polo" aria-label="...">Water-Polo
 		  </label>
 		</div>
 
 		<div class="radio">
 		  <label>
-		    <input type="radio" name="Question3" id="blankRadio1" value="option1" aria-label="...">Netball
+		    <input type="radio" name="Question3" id="blankRadio1" value="Tennis" aria-label="...">Tennis
 		  </label>
 		</div>
 		<input id= "button" type="submit" class="btn btn-success"></button>
 
 </div>
+
 </form>
-  
+</div>
+
 <script src="jquery.min.js"></script>
 <script src="bootstrap.min.js"></script>
+	
 	<script>
+	   var correctAnswerslist = [{"name":"Question1","value":"Rugby"},
+	  						     {"name":"Question2","value":"Squash"},
+	  						     {"name":"Question3","value":"Tennis"}];
+
 	  $("#quizz-form").on("submit", function(evt) {
-	    alert("Submit!!") 
-		  // read about this
-		  evt.preventDefault();
-
-		  // https:api.jquery.com/serializeArray/
+	    alert("Submit!!"); 
+		 evt.preventDefault();
+		  
 		  var answers = $(this).serializeArray();
-
 		  var answersString = JSON.stringify(answers);
-		  alert(answersString);
+		 
+		  $( "span" ).text(answersString).show();
+		  
 
+		});
+		  // read about this
+		  // https:api.jquery.com/serializeArray/
+ 	      // alert(answersString);
 		  // alert($(this)).serializeArray()[0].name);
 		  // how to check the answer?
+		  
 
 		  // create a space on the right to display score.
 
-	  });
+	  
 
-
-
+	  	// $( "form" ).submit(function( event ) {
+				//   if ( $( "input:first" ).val() === "correct" ) {
+				//     $( "span" ).text( "Validated..." ).show();
+				//     return;
+				//   }
+				 
+				//   $( "span" ).text( "Not valid!" ).show().fadeOut( 1000 );
+				//   event.preventDefault();
+				// });
 	</script>
+ 
+ <div ="container">
+ 	<div class="col-md-4  bg-primary">
+ 		<h1>Your Score</h1>
+ 		<span></span>
+ 		 <div id="answers">
+ 		 	<script>
+				
+ 		 	</script>
+
+ 		 </div>
+	</div>
+</div>
 
 </body>
 </html>
